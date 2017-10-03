@@ -75,7 +75,7 @@ tar -xvf $CACHE_DIR/vendor.tar.xz -C $BUILD_DIR
 # installing application dependencies
 if [ -f $BUILD_DIR/requirements.txt ]; then
 	title "Found requirements.txt, installing dependencies using pip"
-	$BUILD_DIR/.heroku/vendor/bin/pip install -r requirements.txt --exists-action=w --src=./.heroku/src --allow-all-external
+	pip install -r requirements.txt --exists-action=w --src=./.heroku/src --allow-all-external
 fi
 
 # creating env variables
